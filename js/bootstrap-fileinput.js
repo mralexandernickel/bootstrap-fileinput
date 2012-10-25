@@ -14,9 +14,9 @@
         el = _ref[_i];
         $el = $(el);
         $feedback_el = $el.prev(".uneditable-input");
-        input_el = $("<input type=\"file\" class=\"filechoose-input\" />");
+        input_el = $("<input type=\"file\" class=\"fileinput-input\" />");
         input_el.hover(function() {
-          return input_el.next(".filechoose").toggleClass("hover");
+          return input_el.next(".fileinput").toggleClass("hover");
         }).change(function() {
           return $feedback_el.text(methods.get_basename($(this).val()));
         });

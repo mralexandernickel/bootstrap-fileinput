@@ -5,9 +5,9 @@ methods =
     for el in $(this)
       $el = $(el)
       $feedback_el = $el.prev ".uneditable-input"
-      input_el = $("<input type=\"file\" class=\"filechoose-input\" />")
+      input_el = $("<input type=\"file\" class=\"fileinput-input\" />")
       input_el.hover ->
-        input_el.next(".filechoose").toggleClass "hover"
+        input_el.next(".fileinput").toggleClass "hover"
       .change ->
         $feedback_el.text methods.get_basename $(this).val()
       input_el.insertBefore $el

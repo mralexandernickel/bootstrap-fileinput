@@ -7,6 +7,6 @@ To get a fully functional, but beautiful Fileinput, you need a markup like this
         <button class="btn fileinput">Browse</button>
     </div>
 
-And call the Fileinput via Javascript
+and call your new Fileinput via Javascript
 
     $(".fileinput").fileinput()

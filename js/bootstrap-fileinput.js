@@ -25,13 +25,13 @@
       return _results;
     },
     get_basename: function(path) {
-      var name, unix_style, windows_style;
-      unix_style = path.split("/");
-      if (unix_style.length > 1) {
-        return name = unix_style[unix_style.length - 1];
+      var name, unix_separator, windows_separator;
+      unix_separator = path.split("/");
+      if (unix_separator.length > 1) {
+        return name = unix_separator[unix_separator.length - 1];
       } else {
-        windows_style = path.split("\\");
-        return name = windows_style[windows_style.length - 1];
+        windows_separator = path.split("\\");
+        return name = windows_separator[windows_separator.length - 1];
       }
     }
   };

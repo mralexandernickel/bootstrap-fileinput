@@ -12,12 +12,12 @@ methods =
         $feedback_el.text methods.get_basename $(this).val()
       input_el.insertBefore $el
   get_basename: (path) ->
-    unix_style = path.split "/"
-    if unix_style.length > 1
-      name = unix_style[unix_style.length-1]
+    unix_separator = path.split "/"
+    if unix_separator.length > 1
+      name = unix_separator[unix_separator.length-1]
     else
-      windows_style = path.split "\\"
-      name = windows_style[windows_style.length-1]
+      windows_separator = path.split "\\"
+      name = windows_separator[windows_separator.length-1]
 
 $.fn.fileinput = (method,options...) ->
   if methods[method]

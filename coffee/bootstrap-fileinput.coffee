@@ -4,12 +4,13 @@ methods =
   init: (options) ->
     for el in $(this)
       $el = $(el)
-      $feedback_el = $el.prev ".uneditable-input"
-      input_el = $("<input type=\"file\" class=\"fileinput-input\" />")
+      formgroup = $el.closest(".form-group")
+      $feedback_el = formgroup.find ".feedback"
+      input_el = formgroup.find "input.fileinput-input"
       input_el.hover ->
-        input_el.next(".fileinput").toggleClass "hover"
+        $el.toggleClass "hover"
       .change ->
-        $feedback_el.text methods.get_basename $(this).val()
+        $feedback_el.val methods.get_basename $(this).val()
       input_el.insertBefore $el
   get_basename: (path) ->
     unix_separator = path.split "/"
